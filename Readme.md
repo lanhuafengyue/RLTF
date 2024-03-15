@@ -14,7 +14,7 @@ PyTorch >= 1.10.0 and CUDA >= 10.2
 
 Example of teacher model training: 
 
-`python train_teacher.py --model resnet32x4 --gpu_id 0 --trial 0 --dataset cifar100`
+```python train_teacher.py --model resnet32x4 --gpu_id 0 --trial 0 --dataset cifar100```
 
 You can also download all the pre-trained teacher models with `scripts/fetch_pretrained_teachers.sh`.
 
