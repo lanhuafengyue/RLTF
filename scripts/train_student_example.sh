@@ -1,0 +1,2 @@
+# train student example
+python train_student.py --epochs 240 --path_t ./save/models/resnet32x4_vanilla/ckpt_epoch_240.pth --distill kd --model_s resnet8x4 -r 0.1 -a 0.9 -b 0 --trial 1 --sample_data 32 --number_teacher 3 --noiseMLE 0.5
