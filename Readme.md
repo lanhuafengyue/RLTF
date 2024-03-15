@@ -14,14 +14,18 @@ PyTorch >= 1.10.0 and CUDA >= 10.2
 
 Example of teacher model training: 
 
-```python train_teacher.py --model resnet32x4 --gpu_id 0 --trial 0 --dataset cifar100```
+```
+python train_teacher.py --model resnet32x4 --gpu_id 0 --trial 0 --dataset cifar100
+```
 
 You can also download all the pre-trained teacher models with `scripts/fetch_pretrained_teachers.sh`.
 
 ### Student Training
 Example of student model training:
 
-`python train_student.py --epochs 240 --path_t ./save/models/resnet32x4_vanilla/ckpt_epoch_240.pth --distill kd --model_s resnet8x4 -r 0.1 -a 0.9 -b 0 --trial 1 --sample_data 32 --number_teacher 3 --noiseMLE 0.5`
+```
+python train_student.py --epochs 240 --path_t ./save/models/resnet32x4_vanilla/ckpt_epoch_240.pth --distill kd --model_s resnet8x4 -r 0.1 -a 0.9 -b 0 --trial 1 --sample_data 32 --number_teacher 3 --noiseMLE 0.5
+```
 
 The meanings of important flags are:
 
@@ -46,7 +50,9 @@ Explanation of the student file folder we provide.
 
 Example of student model testing:
 
-`python student_val.py --path_t ./student/resnet8x4_T_resnet32x4_cifar100_pkt/resnet8x4_best.pth`
+```
+python student_val.py --path_t ./student/resnet8x4_T_resnet32x4_cifar100_pkt/resnet8x4_best.pth
+```
 
 `--path_t` means the student's checkpoint path.
 
